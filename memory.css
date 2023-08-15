@@ -1,0 +1,10 @@
+body {text-align: center}
+table {margin: auto}
+.clicked {
+	outline: dashed blue 3px;
+	filter: opacity(50%);
+}
+img.OK, button.clicked {
+	outline: none;
+	filter: none;
+}
