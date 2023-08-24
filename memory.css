@@ -11,3 +11,8 @@ img.OK, button.clicked {
 	outline: none;
 	filter: none;
 }
+select {
+  font-size: 1.2em;
+  background: #A4C2E3;
+  border-radius: 5px;
+}
