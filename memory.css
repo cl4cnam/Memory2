@@ -3,7 +3,7 @@ body {
 	background-color: #f08256;
 }
 header:{
-	text-align:right;
+	text-align:end;
 }
 table {margin: auto}
 .clicked {
