@@ -2,6 +2,9 @@ body {
 	text-align: center;
 	background-color: #f08256;
 }
+header:{
+	text-align:right;
+}
 table {margin: auto}
 .clicked {
 	outline: dashed blue 3px;
