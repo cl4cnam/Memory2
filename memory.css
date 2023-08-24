@@ -1,4 +1,7 @@
-body {text-align: center}
+body {
+	text-align: center;
+	background-color: #f08256;
+}
 table {margin: auto}
 .clicked {
 	outline: dashed blue 3px;
