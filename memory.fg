@@ -120,7 +120,9 @@ def gameCourse(p_numberOfCopy, p_numberOfDistinct, p_SIGNAL_memorizeDuration, p_
 			allRemainingCards := valuesFrom(allRemainingCards, 'butNotFrom', allClickedCards)
 		else:
 			print('Missed')
+			addCssClassTo('theClickedCards', allClickedCards.cardElement)
 			waitSeconds(get(p_SIGNAL_memorizeDuration))
+			DelCssClassFrom('theClickedCards', allClickedCards.cardElement)
 			showBack(allClickedCards)
 
 
@@ -138,12 +140,9 @@ var LABEL_gameCourse
 var congratMessage
 var restartButton
 
-var numberOfCopy := js ():
-	return document.getElementById('copyNumber').selectedOptions[0].value
-var numberOfDistinct := js ():
-	return document.getElementById('distinctNumber').selectedOptions[0].value
-var SIGNAL_numberOfSeconds := js ():
-	return document.getElementById('memorizeDuration').selectedOptions[0].value
+var numberOfCopy
+var numberOfDistinct
+var SIGNAL_numberOfSeconds
 
 parallel:
 	# Game course
@@ -152,9 +151,10 @@ parallel:
 		removeElt(congratMessage)
 		
 		# The main part of the game
-		gameCourse(numberOfCopy, numberOfDistinct, 'SIGNAL_numberOfSeconds', 'SIGNAL_clickOnCard')
+		if not isEmpty(numberOfCopy) and not isEmpty(numberOfDistinct):
+			gameCourse(numberOfCopy, numberOfDistinct, 'SIGNAL_numberOfSeconds', 'SIGNAL_clickOnCard')
+			congratMessage := displayNewMessage('Congratulations, you have found all identical cards!')
 		
-		congratMessage := displayNewMessage('Congratulations, you have found all identical cards!')
 		awaitForever()
 		
 	# Change of parameters
