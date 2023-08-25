@@ -50,7 +50,7 @@ def awaitClickOnNewButton(p_label):
 		const lElt = document.createElement('button')
 		lElt.innerHTML = p_label
 		document.body.appendChild(lElt)
-		lElt.scrollIntoView()
+		//~ lElt.scrollIntoView()
 		return lElt
 	awaitClickBeep(lButton)
 	lButton
