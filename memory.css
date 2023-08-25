@@ -1,3 +1,6 @@
+#langage {
+  display: none;
+}
 body {
 	text-align: center;
 	background-color: #f08256;
@@ -29,5 +32,5 @@ button {
   background-color: #48beb3;
 }
 .theClickedCards {
-	outline: outset #a00 10px;
+  outline: outset #a00 10px;
 }
