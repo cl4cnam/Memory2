@@ -28,3 +28,6 @@ button {
   font-size: 2em;
   background-color: #48beb3;
 }
+.theClickedCards {
+	outline: outset #a00 10px;
+}
