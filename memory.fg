@@ -55,10 +55,6 @@ def awaitClickOnNewButton(p_label):
 	awaitClickBeep(lButton)
 	lButton
 
-def removeElt(p_elt):
-	js (p_elt):
-		p_elt?.parentNode?.removeChild?.(p_elt)
-
 #==========================================
 # Game Course
 #==========================================
