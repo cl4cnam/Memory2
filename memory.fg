@@ -62,7 +62,7 @@ def awaitClickOnNewButton(p_label):
 def gameCourse(p_numberOfCopy, p_numberOfDistinct, p_SIGNAL_memorizeDuration, p_SIGNAL_clickOnCard):
 
 	# Prepare game table
-	#=======================
+	#======================
 
 	var cardDeck := makeCardDeck(p_numberOfCopy, p_numberOfDistinct)
 
